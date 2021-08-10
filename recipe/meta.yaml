@@ -18,7 +18,7 @@ source:
 # See https://github.com/tensorflow/tensorboard/blob/348af4c/tensorboard/data/server/pip_package/build.py#L78-L86
 build:
   script_env:
-    - WHEELNAME={{ _name }}-{{ version }}-py3-none-any.whl  # [win]
+    - WHEELNAME={{ _name }}-{{ version }}-py3-none-any.whl  # [win or osx-arm64]
   number: 0
 
 requirements:
