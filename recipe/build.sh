@@ -3,6 +3,7 @@
 set -euxo pipefail
 
 pushd tensorboard/data/server
+cargo tree
 cargo build --release
 
 pushd pip_package
