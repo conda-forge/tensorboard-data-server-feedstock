@@ -5,8 +5,18 @@ set -euxo pipefail
 pushd tensorboard/data/server
 cargo build --release
 
+CPU_NAME_CUSTOM="x86_64"
+
+if [[ "${target_platform}" == "linux-ppc64le" ]]; then
+  CPU_NAME_CUSTOM="ppc64le"
+fi
+
+if [[ "${target_platform}" == "linux-aarch64" ]]; then
+  CPU_NAME_CUSTOM="aarch64"
+fi
+
 pushd pip_package
-$PYTHON build.py --out-dir="$SRC_DIR/" --server-binary=../target/${CARGO_BUILD_TARGET}/release/rustboard
+$PYTHON build.py --out-dir="$SRC_DIR/" --server-binary=../target/${CARGO_BUILD_TARGET}/release/rustboard --cpu=${CPU_NAME_CUSTOM}
 
 if [[ "${target_platform}" == "osx-arm64" ]]; then
   WHEEL_NAME=$(ls $SRC_DIR/*.whl)
