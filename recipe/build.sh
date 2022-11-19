@@ -14,13 +14,13 @@ if [[ "${target_platform}" == "osx-arm64" ]]; then
   mv $WHEEL_NAME ${NEW_WHEEL_NAME}
 fi
 
-if [[ "${target_platform}" == "ppc64le" ]]; then
+if [[ "${target_platform}" == "linux-ppc64le" ]]; then
   WHEEL_NAME=$(ls $SRC_DIR/*.whl)
   NEW_WHEEL_NAME=${WHEEL_NAME/x86_64/ppc64le}
   mv $WHEEL_NAME ${NEW_WHEEL_NAME}
 fi
 
-if [[ "${target_platform}" == "aarch64" ]]; then
+if [[ "${target_platform}" == "linux-aarch64" ]]; then
   WHEEL_NAME=$(ls $SRC_DIR/*.whl)
   NEW_WHEEL_NAME=${WHEEL_NAME/x86_64/aarch64}
   mv $WHEEL_NAME ${NEW_WHEEL_NAME}
