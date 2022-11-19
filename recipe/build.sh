@@ -14,4 +14,16 @@ if [[ "${target_platform}" == "osx-arm64" ]]; then
   mv $WHEEL_NAME ${NEW_WHEEL_NAME}
 fi
 
+if [[ "${target_platform}" == "ppc64le" ]]; then
+  WHEEL_NAME=$(ls $SRC_DIR/*.whl)
+  NEW_WHEEL_NAME=${WHEEL_NAME/x86_64/ppc64le}
+  mv $WHEEL_NAME ${NEW_WHEEL_NAME}
+fi
+
+if [[ "${target_platform}" == "aarch64" ]]; then
+  WHEEL_NAME=$(ls $SRC_DIR/*.whl)
+  NEW_WHEEL_NAME=${WHEEL_NAME/x86_64/aarch64}
+  mv $WHEEL_NAME ${NEW_WHEEL_NAME}
+fi
+
 $PYTHON -m pip install --no-deps --ignore-installed -v $SRC_DIR/*.whl
