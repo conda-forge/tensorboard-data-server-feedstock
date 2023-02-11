@@ -6,9 +6,7 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
-source:
-  # data server versions are not tagged, so we have to use the ID of the relevant rev
-  
+source:  
   url: https://github.com/tensorflow/tensorboard/archive/refs/tags/data-server-v{{ version }} tar.gz
   sha256: 47f0b4edf434cedea351f60ad7ebe63b575cfd103fa19555b404e0e108c364cd
   patches:
