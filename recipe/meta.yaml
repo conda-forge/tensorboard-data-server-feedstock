@@ -28,7 +28,7 @@ requirements:
     - {{ compiler('rust') }}  # [not win]
   host:
     - python
-    - pip
+    - pip 22
     - openssl  # [not win]
   run:
     - python
