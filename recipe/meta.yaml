@@ -24,13 +24,11 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - crossenv 1.2                           # [build_platform != target_platform]
     - {{ compiler('c') }}  # [not win]
     - {{ compiler('rust') }}  # [not win]
   host:
     - python
-    - pip 22
-    - setuptools 65
+    - pip
     - openssl  # [not win]
   run:
     - python
