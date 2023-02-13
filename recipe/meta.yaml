@@ -29,6 +29,7 @@ requirements:
   host:
     - python
     - pip 22
+    - setuptools 65
     - openssl  # [not win]
   run:
     - python
