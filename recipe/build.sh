@@ -8,7 +8,7 @@ cargo build --release
 pushd pip_package
 
 if [[ "${target_platform}" == "osx-arm64" ]]; then
-  $PYTHON build.py --out-dir="$SRC_DIR/" --server-binary=../target/${CARGO_BUILD_TARGET}/release/rustboard --platform macosx_11_0 --cpu arm64
+  $PYTHON build.py --out-dir="$SRC_DIR/" --server-binary=../target/${CARGO_BUILD_TARGET}/release/rustboard --universal
 else
   $PYTHON build.py --out-dir="$SRC_DIR/" --server-binary=../target/${CARGO_BUILD_TARGET}/release/rustboard
 fi
