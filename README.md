@@ -1,11 +1,11 @@
-About tensorboard-data-server
-=============================
+About tensorboard-data-server-feedstock
+=======================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tensorboard-data-server-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tensorflow/tensorboard
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/tensorboard-data-server-feedstock/blob/main/LICENSE.txt)
 
 Summary: Data server for TensorBoard
 
