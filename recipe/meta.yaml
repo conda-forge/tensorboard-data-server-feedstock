@@ -30,6 +30,7 @@ requirements:
   host:
     - python
     - pip
+    - setuptools
     - openssl  # [not win]
   run:
     - python
