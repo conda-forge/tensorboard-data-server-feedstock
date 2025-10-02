@@ -18,7 +18,7 @@ source:
 build:
   script_env:
     - WHEELNAME={{ _name }}-{{ version }}-py3-none-any.whl  # [win]
-  number: 2
+  number: 3
 
 requirements:
   build:
